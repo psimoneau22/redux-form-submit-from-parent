@@ -13,7 +13,7 @@ export default class Parent extends Component {
 
                     Open the browser console and observe the logs
 
-                    This example's 'submit form funtion has access to the wrapped components instance methods/props/etc', I would prefer this method
+                    This example's 'submit form funtion has access to the wrapped components instance methods/props/etc',
                 </p>
                 <button onClick={this.handleClick}>Submit from Parent</button>
                 <Child submitRef={submit => this.submit = submit} />

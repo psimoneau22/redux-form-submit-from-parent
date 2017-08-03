@@ -11,7 +11,7 @@ class App extends Component {
     return (
       <Provider store={store}>
         <div>
-          {/* <Parent1 /> */}
+          <Parent1 /> 
           <Parent2 /> 
         </div>
       </Provider>

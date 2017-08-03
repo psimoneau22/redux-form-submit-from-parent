@@ -3,11 +3,6 @@ import { reduxForm } from 'redux-form';
 import { domOnlyProps, fakeApi } from '../util';
 
 class Child extends Component {
-
-    componentDidMount() {
-        this.props.submitRef(this.props.handleSubmit(this.submitForm));
-    }
-    
     submitForm = form => {
             
         //send the values to the server:
@@ -23,6 +18,7 @@ class Child extends Component {
     }
     
     render() {
+        this.props.submitRef(this.props.handleSubmit(this.submitForm));
         return (
             <div>
                 <div>field1: <input {...domOnlyProps(this.props.fields.field1)} /></div>
@@ -33,7 +29,7 @@ class Child extends Component {
 }
 
 export default reduxForm({
-    form: 'submit-from-parent',
+    form: 'submit-from-parent-2',
     fields: [
         'field1',
         'field2'
